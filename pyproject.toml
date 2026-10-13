@@ -1,0 +1,46 @@
+[project]
+name = "qe-hero"
+version = "0.1.0"
+description = "My QE learning path: tests, framework, notes and interview prep"
+requires-python = ">=3.12"
+dependencies = [
+    "requests>=2.32",
+    "pytest>=8.3",
+    "playwright>=1.49",
+    "pytest-playwright>=0.6",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.8",
+    "mypy>=1.13",
+    "pre-commit>=4.0",
+    "types-requests>=2.32",
+]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+extend-exclude = [
+    "legacy-suite",                      # kept "as inherited" for P05-04 and P05-08
+    "*.md",                              # code in Markdown is teaching material, not project code
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "PT", "S113"]   # S113 = HTTP call without a timeout
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S101"]                    # assert is how tests check things
+
+[tool.mypy]
+python_version = "3.12"
+files = ["framework"]
+strict = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]                       # tests import python_basics/, framework/, ai/ from the repo root
+addopts = "-ra --strict-markers"
+markers = [
+    "smoke: fast checks of the most important paths",
+]

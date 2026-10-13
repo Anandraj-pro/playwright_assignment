@@ -1,0 +1,23 @@
+# Checks the deliverables of the task named in the branch (task/P04-02-...).
+# Shipped with the template: you don't need to edit it. See scripts/check_task.py.
+name: task-check
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  task-check:
+    if: startsWith(github.head_ref, 'task/')
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv sync --frozen
+      - name: Check task deliverables
+        shell: bash                        # bash here means -eo pipefail, so tee can't hide a failure
+        env:
+          BRANCH: ${{ github.head_ref }}   # via env, never inline: branch names are user input
+        run: uv run python scripts/check_task.py --branch "$BRANCH" | tee -a "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,79 @@
+id,phase,title,level,hours,app,deliverable,status
+P00-00,P00,Hello automation: your first UI and API tests,Zero,2,"SauceDemo, Restful-Booker","tests/hello/test_hello_api.py, tests/hello/test_hello_ui.py",todo
+P00-01,P00,"Your toolchain: Codespaces, dev container or local",Zero,2,—,"README.md, docs/setup.md",todo
+P00-02,P00,Git fundamentals,Zero,3,—,docs/git-cheatsheet.md,todo
+P00-03,P00,"PR workflow, conflicts and rebase",Hero,3,—,".github/PULL_REQUEST_TEMPLATE.md, a merged PR",todo
+P00-04,P00,Tour the project skeleton and quality tooling,Zero,2,—,docs/tooling.md,todo
+P00-05,P00,First workflow: lint and unit tests on every PR,Zero,2,—,".github/workflows/ci.yml, a status badge in README.md",todo
+P00-06,P00,"AI pair-testing in your repo, safely",Zero,3,your repo,"CLAUDE.md (or AGENTS.md), docs/ai/usage-log.md, interview-notes/ai-mock.md",todo
+P00-07,P00,Automate your task tracker with the GitHub CLI (optional),Super Hero,3,GitHub,scripts/create_issues.py,todo
+P01-01,P01,"QA in the SDLC: levels, types, life cycles and the test pyramid",Zero,4,"Toolshop, SauceDemo","docs/fundamentals/qa-in-sdlc.md, docs/fundamentals/glossary.md",todo
+P01-02,P01,"Test-design techniques: partitions, boundaries, decision tables, states and pairs",Zero,4,"Toolshop registration, SauceDemo checkout","docs/test-design/registration.md, docs/test-design/checkout-states.md",todo
+P01-03,P01,"Test scenarios, test cases and traceability",Zero,3,"Toolshop (search, filters, cart)","docs/test-cases/toolshop-search.md, docs/test-cases/traceability.md",todo
+P01-04,P01,"Story review, risk analysis and shift-left",Hero,3,"Toolshop (checkout, favourites, admin invoices)","docs/fundamentals/story-review.md, docs/fundamentals/risk-matrix.md",todo
+P01-05,P01,LLM fundamentals and prompting for QA,Zero,3,"Toolshop (user stories), SauceDemo bugs","ai/prompts/*.md, docs/ai/llm-basics.md",todo
+P02-01,P02,"Data types, collections and comprehensions",Zero,3,SauceDemo,python_basics/products.py,todo
+P02-02,P02,"Functions, type hints and exceptions",Zero,3,SauceDemo checkout,python_basics/checkout.py,todo
+P02-03,P02,Files and test-data formats,Zero,2,"SauceDemo, Toolshop","framework/data/saucedemo_users.csv, python_basics/data_io.py",todo
+P02-04,P02,OOP and dataclasses,Hero,3,SauceDemo / Toolshop domain,"framework/models.py, python_basics/cart.py",todo
+P02-05,P02,"Decorators, context managers, logging and config",Hero,4,all (framework plumbing),"framework/utils/retry.py, framework/utils/wait.py, framework/config.py, .env.example",todo
+P02-06,P02,Coding interview drills,Hero,4,—,python_basics/drills.py,todo
+P02-07,P02,Advanced Python for framework authors,Super Hero,4,Toolshop API,"framework/api/pagination.py, framework/types.py, framework passes mypy --strict",todo
+P03-01,P03,"First pytest suite: discovery, assertions, running",Zero,2,—,"tests/unit/test_products.py, tests/unit/test_checkout.py, tests/unit/test_drills.py",todo
+P03-02,P03,"Debug a failing test: tracebacks, breakpoints and pytest's debugging flags",Zero,2,— (a debugging lab),"tests/unit/test_debug_lab.py, docs/debugging.md",todo
+P03-03,P03,Parametrize and data-driven tests,Zero,2,SauceDemo data,"tests/unit/test_checkout_params.py, tests/unit/test_users_data.py",todo
+P03-04,P03,Fixtures deep dive and conftest,Hero,4,Restful-Booker,"tests/conftest.py, tests/api/conftest.py, tests/api/booker/test_booking_fixtures.py",todo
+P03-05,P03,"Markers, config and custom CLI options",Hero,3,all,"[tool.pytest.ini_options] in pyproject.toml, --env option in tests/conftest.py",todo
+P03-06,P03,"Hooks, plugins and coverage",Super Hero,4,all,"framework/pytest_plugin.py, tests/unit/test_plugin.py",todo
+P04-01,P04,HTTP fundamentals and manual API exploration,Zero,2,Restful-Booker,docs/api-exploration.md,todo
+P04-02,P04,First API tests with requests,Zero,3,Restful-Booker,tests/api/booker/test_booking_basic.py,todo
+P04-03,P04,"Auth, CRUD and negative testing",Hero,4,Restful-Booker,"tests/api/booker/test_booking_crud.py, tests/api/booker/test_booking_negative.py",todo
+P04-04,P04,API client layer and schema validation,Hero,4,Restful-Booker,"framework/api/base_client.py, framework/api/booker_client.py, framework/api/models/booking.py",todo
+P04-05,P04,"Docker as a user: images, containers, ports and volumes",Zero,3,The Internet (Docker image),docs/docker-cheatsheet.md,todo
+P04-06,P04,Run the demo stack locally with Compose,Zero,3,"Toolshop, Restful-Booker, Pagila","docs/local-stack.md, Makefile targets stack-up, stack-down, stack-reset",todo
+P04-07,P04,"Toolshop API: bearer auth, pagination, filters, data factories",Hero,4,Toolshop API,"framework/api/toolshop_client.py, framework/data/factories.py, tests/api/toolshop/",todo
+P04-08,P04,Contract testing and API resilience,Super Hero,5,"Petstore v3 (self-hosted), Toolshop specs","tests/contract/, scripts/spec_diff.py, docs/contract-testing.md",todo
+P05-01,P05,First Playwright tests on SauceDemo,Zero,3,SauceDemo,tests/ui/saucedemo/test_login.py,todo
+P05-02,P05,Locator strategy and data-driven login,Zero,3,SauceDemo,"tests/ui/saucedemo/test_login_matrix.py, docs/locator-strategy.md",todo
+P05-03,P05,Page Object Model: SauceDemo purchase end-to-end,Hero,4,SauceDemo,"framework/pages/saucedemo/, tests/ui/saucedemo/test_checkout.py",todo
+P05-04,P05,Rescue a legacy suite,Hero,5,SauceDemo (`legacy-suite/playwright/`),"docs/legacy-rescue.md, tests/ui/saucedemo/test_legacy_rescued.py",todo
+P05-05,P05,The Internet: tricky UI patterns,Hero,4,The Internet,tests/ui/internet/ (≥12 tests),todo
+P05-06,P05,"Toolshop: auth state, hybrid API+UI, network mocking",Hero,5,Toolshop,"framework/pages/toolshop/, tests/ui/toolshop/",todo
+P05-07,P05,"Debugging, cross-browser, mobile, visual checks and bug hunt",Super Hero,5,"SauceDemo, Toolshop with-bugs","tests/ui/test_visual.py, tests/ui/test_bug_hunt.py, docs/bugs/, docs/ui-debugging.md",todo
+P05-08,P05,Selenium to Playwright migration,Super Hero,3,SauceDemo (`legacy-suite/selenium/`),"docs/selenium-migration.md, tests/ui/migrated/, scripts/parity.py",todo
+P06-01,P06,SQL fundamentals on Chinook (SQLite),Zero,4,Chinook,"sql/01_chinook_basics.sql, tests/db/test_chinook_queries.py",todo
+P06-02,P06,Interview SQL on Pagila (PostgreSQL in Docker),Hero,5,Pagila,"sql/02_pagila_interview.sql, docs/pagila-erd.png",todo
+P06-03,P06,Python DB layer and data-integrity tests,Hero,4,Pagila,"framework/db/engine.py, tests/db/pagila/test_integrity.py",todo
+P06-04,P06,API/UI → DB consistency on self-hosted Toolshop,Hero,5,Toolshop (local Docker),"docker-compose.override.yml (in your Toolshop clone), framework/db/toolshop.py, tests/db/toolshop/",todo
+P06-05,P06,"Test data strategies, ephemeral DBs, schema and ETL checks",Super Hero,5,Pagila via testcontainers,"tests/db/conftest.py, tests/db/test_schema_contract.py, tests/db/test_reconciliation.py, docs/test-data-strategy.md",todo
+P07-01,P07,Baseline and first parallel run,Zero,2,all,docs/parallel-baseline.md,todo
+P07-02,P07,Make tests parallel-safe,Hero,4,"Restful-Booker, SauceDemo, Toolshop","refactored tests/, framework/data/accounts.py",todo
+P07-03,P07,Distribution modes and shared session resources,Hero,3,all,"tests/conftest.py (lock-based session setup), Makefile lanes, docs/parallel-safety.md (update)",todo
+P07-04,P07,Sharding across machines and a parallel strategy,Super Hero,4,self-hosted stack,".test_durations, scripts/shard_model.py, docs/parallel-strategy.md",todo
+P08-01,P08,Containerise your test runner,Hero,4,public demo apps,"docker/tests.Dockerfile, .dockerignore, make docker-test",todo
+P08-02,P08,"Your own Compose: tests + apps, health checks, networks",Hero,4,"Pagila, Petstore, The Internet (+ Toolshop via external network)","docker-compose.yml, .env.docker.example",todo
+P08-03,P08,"Maintain: pin, slim, scan, update, multi-arch, devcontainer",Super Hero,4,your images,"docker/tests-slim.Dockerfile, .github/dependabot.yml, .devcontainer/devcontainer.json, docs/docker-maintenance.md",todo
+P09-01,P09,API + UI smoke in CI with artifacts and summaries,Zero,3,public demo apps,"a smoke job in ci.yml, scripts/junit_summary.py",todo
+P09-02,P09,Quality gates and branch protection,Hero,3,your repo,"gate jobs in ci.yml, .github/CODEOWNERS, branch protection on main, docs/ci-gates.md",todo
+P09-03,P09,"Service containers, DB tests and the full stack in CI",Hero,4,"Pagila, Toolshop",db and toolshop-e2e jobs,todo
+P09-04,P09,"Matrix, sharding, nightly regression and published reports",Hero,4,all,.github/workflows/nightly.yml,todo
+P09-05,P09,"Images in CI, reusable workflows, environments, self-hosted runners",Super Hero,5,your images and workflows,".github/actions/setup-qe/action.yml, .github/workflows/image.yml, .github/workflows/run-suite.yml, docs/runners-security.md",todo
+P10-01,P10,Bug reports that get fixed,Zero,3,"Toolshop with-bugs, SauceDemo","docs/bugs/BUG-001.md … BUG-005.md, .github/ISSUE_TEMPLATE/bug_report.yml",todo
+P10-02,P10,Rich reports: pytest-html and Allure with attachments,Hero,3,all,"report hooks in framework/pytest_plugin.py, Allure steps in page objects and clients, docs/reporting.md",todo
+P10-03,P10,"Flaky tests: detect, reproduce, quarantine",Hero,4,"SauceDemo (`performance_glitch_user`), The Internet (dynamic loading), your suite","scripts/flake_rate.py, a quarantine lane in Makefile and CI, docs/flaky-policy.md",todo
+P10-04,P10,Test metrics and a quality dashboard,Super Hero,4,your CI history,"scripts/metrics_ingest.py, scripts/metrics_report.py, docs/quality-dashboard.md",todo
+P11-01,P11,Performance testing with Locust,Hero,4,Restful-Booker and Toolshop API (self-hosted),"perf/locustfile.py, docs/performance/report.md",todo
+P11-02,P11,"Accessibility testing: axe scans, keyboard and screen readers",Hero,4,"Toolshop (hosted is fine: scans only read pages), SauceDemo","tests/a11y/test_axe_scans.py, tests/a11y/test_keyboard.py, docs/accessibility.md",todo
+P11-03,P11,Security testing basics for QEs,Hero,5,Toolshop API (self-hosted),"tests/security/test_authz_matrix.py, tests/security/test_input_handling.py, tests/security/test_headers.py, docs/security-testing.md",todo
+P11-04,P11,"Non-functional gates in CI: performance smoke, ZAP baseline and accessibility",Super Hero,5,your self-hosted stack in CI,".github/workflows/non-functional.yml, scripts/perf_gate.py, .zap/rules.tsv, docs/non-functional-gates.md",todo
+P12-01,P12,Use MCP servers: Playwright MCP and friends,Hero,4,Toolshop,".mcp.json, docs/ai/mcp-usage.md, a PR with AI-drafted tests after your review",todo
+P12-02,P12,Build your own MCP server,Hero,5,"your framework, Pagila, Restful-Booker","ai/mcp_server/server.py, tests/unit/test_mcp_server.py, docs/ai/qe-tools-server.md",todo
+P12-03,P12,Write skills for your QE workflows,Hero,4,your repo,".claude/skills/{write-api-test,write-page-object,triage-failure,mock-interview}/SKILL.md, docs/ai/skills-eval.md",todo
+P12-04,P12,"Build a failure-triage agent, with evals",Super Hero,6,"Toolshop with-bugs, your CI results","ai/agents/triage/agent.py, ai/evals/triage_cases.json, tests/unit/test_triage_agent.py, docs/ai/triage-agent.md",todo
+P12-05,P12,Testing AI/LLM features,Super Hero,5,a small LLM feature you build,"ai/features/bug_summarizer.py, tests/ai/, ai/evals/summarizer_golden.json, docs/ai/testing-llm-features.md",todo
+P12-06,P12,AI in CI (advisory) and your team's adoption playbook,Super Hero,5,your CI,".github/workflows/ai-advisory.yml, docs/ai-adoption-playbook.md, a 10-minute presentation",todo
+P13-01,P13,"Explain your framework: README, architecture and ADRs",Hero,4,your repo,"README.md, docs/architecture.md, docs/adr/0001-*.md … 0003-*.md",todo
+P13-02,P13,Capstone: Toolshop end-to-end quality,Super Hero,16,Toolshop (normal and with-bugs),"capstone/strategy.md, capstone/test-plan.md, tests under tests/*/toolshop/, capstone/report.md, a 15-minute demo",todo
+P13-03,P13,Timed live-coding drills,Hero,6,"SauceDemo, Restful-Booker, Pagila","interview-notes/drills/ (one folder per attempt, with time and score)",todo
+P13-04,P13,"Behavioural stories (STAR), resume and portfolio",Hero,4,your repo,"interview-notes/stories.md, docs/portfolio.md, updated resume bullets",todo
+P13-05,P13,Full mock interview loop,Super Hero,6,—,"interview-notes/mock-loop.md (scores, feedback and an improvement plan for 2 loops)",todo
